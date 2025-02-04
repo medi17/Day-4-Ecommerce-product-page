@@ -597,9 +597,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -608,9 +605,6 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -866,9 +860,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -2526,26 +2517,6 @@
       padding-left: calc(var(--spacing) * 40);
     }
   }
-  .xl\:gap-32 {
-    @media (width >= 80rem) {
-      gap: calc(var(--spacing) * 32);
-    }
-  }
-  .xl\:py-20 {
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 20);
-    }
-  }
-  .xl\:pr-28 {
-    @media (width >= 80rem) {
-      padding-right: calc(var(--spacing) * 28);
-    }
-  }
-  .xl\:pl-40 {
-    @media (width >= 80rem) {
-      padding-left: calc(var(--spacing) * 40);
-    }
-  }
 }
 body {
   font-family: 'Kumbh Sans', serif;
@@ -2627,6 +2598,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   transition: top 0.8s;
+  z-index: 500;
 }
 .cart_topic {
   padding: 24px 24px 30px;
@@ -2705,6 +2677,9 @@ body {
   .alone .carousel {
     border-radius: 8px;
   }
+  .button {
+    z-index: 300;
+  }
 }
 .alone .wrapper {
   padding: 40px 0;
@@ -2716,9 +2691,6 @@ body {
 }
 .alone .carousel {
   border-radius: 8px;
-}
-.button {
-  z-index: 300;
 }
 .close_image {
   position: absolute;

@@ -98,6 +98,7 @@ body{
      border-radius: 16px;
      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
      transition: top 0.8s;
+     z-index: 500;
 }
 .cart_topic{
      padding: 24px 24px 30px;
@@ -179,6 +180,9 @@ body{
      .alone .carousel {
           border-radius: 8px;
      }
+     .button {
+          z-index: 300;
+     }
 }
 .alone .wrapper {
      padding: 40px 0;
@@ -192,10 +196,6 @@ body{
 }
 .alone .carousel{
      border-radius: 8px;
-}
-.button {
-     z-index: 300;
-
 }
 
 .close_image{
