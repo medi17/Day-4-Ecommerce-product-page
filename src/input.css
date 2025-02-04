@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+     --color-MyOrange: hsl(26, 100%, 55%);
+     --color-PaleOrange: hsl(25, 100%, 94%);
+     --color-VeryDarkBlue: hsl(220, 13%, 13%);
+     --color-DarkGrayishBlue: hsl(219, 9%, 45%);
+     --color-GrayishBlue: hsl(220, 14%, 75%);
+     --color-LightGrayishBlue: hsl(223, 64%, 98%);
+     --color-Mywhite: hsl(0, 0%, 100%);
+     --color-Myblack: hsl(0, 0%, 0%);
+     --color-overlay: hsl(0, 0%, 0.5%);
+}
+body{
+     font-family: 'Kumbh Sans', serif;
+}
+.wrapper, .carousel{
+     scrollbar-width: none;
+     -ms-overflow-style: none;
+}
+@media (min-width: 768px){
+     .nav a::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 4px;
+          background: var(--color-MyOrange);
+          left: 0;
+          bottom: -30px;
+          transition: width 0.3s;
+          border-radius: 5px;
+     }
+     .nav a:hover::after {
+          width: 100%;
+     }
+
+}
+@media (max-width: 768px) {
+     .nav {
+          background-color: white;
+          position: fixed;
+          width: 60%;
+          height: 100vh;
+          left: -450px;
+          top: 0;
+          z-index: 1000;
+          padding: 20px;
+          font-weight: 600;
+          color: var(--color-VeryDarkBlue);
+          transition: left 0.6s;
+     }
+     
+     .nav li {
+          margin-bottom: 14px;
+     }
+
+     .nav.active {
+          left: 0;
+     }
+     body.active {
+          overflow: hidden;
+     }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+     #add_cart{
+     font-size: 14px;
+}
+}
+/* JS--CSS */
+
+.cart_num{
+     position: absolute;
+     top: -10px;
+     right: 30px;
+     background-color: var(--color-MyOrange);
+     color: var(--color-Mywhite);
+     border-radius: 45%;
+     padding: 0 8px;
+     font-size: 12px;
+     font-weight: 700;
+}
+@media (min-width: 768px){
+     .cart_num{
+          top: 0;
+          right: 70px;
+     }
+}
+.cart_open{
+     position: absolute;
+     top: 215px;
+     right: 50%;
+     transform: translate(50%, -50%);
+     width: 360px;
+     height: 285px;
+     background-color: var(--color-Mywhite);
+     border-radius: 16px;
+     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+     transition: top 0.8s;
+}
+.cart_topic{
+     padding: 24px 24px 30px;
+     font-size: 20px;
+     font-weight: 700;
+}
+.cart_horiz{
+     color: var(--color-GrayishBlue);
+}
+.cart_container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 24px;
+}
+.cart_image{
+     width: 50px;
+     height: 50px;
+     border-radius: 6px;
+     margin-right: 12px;
+}
+.cart_delete {
+     width: 16px;
+     height: 16px;
+     margin-left: 12px;
+     cursor: pointer;
+}
+.cart_descript{
+     color: var(--color-DarkGrayishBlue);
+}
+.result{
+     font-weight: 700;
+     color: var(--color-Myblack);
+}
+.button_container{
+     margin: 0 24px;
+     align-items: center;
+}
+.cart_button{
+     width: 100%;
+     height: 60px;
+     background-color: var(--color-MyOrange);
+     font-size: 18px;
+     font-weight: 700;
+     color: var(--color-Myblack);
+     border-radius: 8px;
+     cursor: pointer;
+}
+.empty_container{
+     color: var(--color-DarkGrayishBlue);
+     font-size: 16px;
+     font-weight: 700;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 60%;
+}
+@media (min-width: 768px) {
+     .cart_open {
+          right: 20%;
+     }
+}
+
+
+.alone{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 100;
+     overflow: auto;
+}
+@media (min-width: 768px) {
+     .alone .button {
+          display: block;
+
+     }
+     .alone .carousel {
+          border-radius: 8px;
+     }
+}
+.alone .wrapper {
+     padding: 40px 0;
+     border-radius: 8px;
+}
+
+.alone .carousel img{ 
+     padding: 0 30px;
+
+     border-radius: 8px;
+}
+.alone .carousel{
+     border-radius: 8px;
+}
+.button {
+     z-index: 300;
+
+}
+
+.close_image{
+     position: absolute;
+     top: 2%;
+     left: 90%;
+     transform: translate(-50%, -50%);
+     z-index: 200;
+     cursor: pointer;
+}
+.close_image:hover, .btn-img:hover{
+     filter: invert(49%) sepia(69%) saturate(963%) hue-rotate(348deg) brightness(102%) contrast(101%);
+}
+.image-btn.active{
+     opacity: 50%;
+}
+.alone .image-btn.active{
+     filter: brightness(2);
+}
+.imgLink.active, .alone .imgLink.active{
+     border: 2px solid var(--color-MyOrange);
+}

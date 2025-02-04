@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Frontend Mentor | E-commerce product page</title>
+     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+     
+     <link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+     <header class="flex justify-between items-center p-5 lg:px-32">
+          <div class="flex justify-between items-center gap-5">
+               <img src="images/icon-menu.svg" alt="menu-picture" class="menu md:hidden self-end w-5 h-4 cursor-pointer">
+               <img src="images/logo.svg" alt="logo-picture" class="mr-5">
+               <div class="menu-overlay md:block">
+                    <ul class="nav md:flex md:justify-between md:gap-5">
+                         <img src="images/icon-close.svg" alt="close-picture" class="close md:hidden cursor-pointer mb-10">
+                         <li class="md:text-DarkGrayishBlue md:hover:text-VeryDarkBlue"><a href="#" class="relative">Collections</a></li>
+                         <li class="md:text-DarkGrayishBlue md:hover:text-VeryDarkBlue"><a href="#" class="relative">Men</a></li>
+                         <li class="md:text-DarkGrayishBlue md:hover:text-VeryDarkBlue"><a href="#" class="relative">Women</a></li>
+                         <li class="md:text-DarkGrayishBlue md:hover:text-VeryDarkBlue"><a href="#" class="relative">About</a></li>
+                         <li class="md:text-DarkGrayishBlue md:hover:text-VeryDarkBlue"><a href="#" class="relative">Contact</a></li>
+                    </ul>
+               </div>
+          </div>
+
+          <div class="flex justify-between items-center gap-5 md:gap-10 relative">
+               <div class="cursor-pointer w-5 h-5 flex justify-center" id="cart"><img src="images/icon-cart.svg" alt="cart-picture" class="w-full h-auto"></div>
+               <img src="images/image-avatar.png" alt="profile-picture" class="w-5 h-5 md:w-10 md:h-10 cursor-pointer hover:border-2 border-MyOrange rounded-full">
+          </div>
+     </header>
+     <div class="overlay hidden fixed top-0 left-0 w-full h-full z-20 bg-Myblack opacity-80"></div>
+     <div class="px-32 hidden md:block">
+          <div class="h-[0.07px] w-full bg-GrayishBlue hidden md:block"></div>
+     </div>
+     <main class="md:flex md:justify-center md:items-center md:gap-10 md:pl-10 md:py-10 xl:gap-32 xl:pl-40 xl:py-20">
+          <div id="image_wrapper">
+               <div class="big-images flex justify-center items-center">
+                    <div class="wrapper overflow-hidden max-w-[375px] relative">
+                         <div id="left" class="lg:hidden previous button  top-1/2 translate-y-[-50%] w-10 h-10 bg-white text-center rounded-full absolute left-4 cursor-pointer"><img src="images/icon-previous.svg" class="btn-img w-2 h-3 absolute top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]"></div>
+                         <div class="carousel flex md:rounded-2xl">
+                              <img src="images/image-product-1.jpg" alt="img" id="img1"
+                                   class="shoe-images h-[340px]  object-cover min-w-[375px] md:rounded-2xl">
+                              <img src="images/image-product-2.jpg" alt="img" id="img2"
+                                   class="shoe-images h-[340px]  object-cover min-w-[375px] md:rounded-2xl">
+                              <img src="images/image-product-3.jpg" alt="img" id="img3"
+                                   class="shoe-images h-[340px] object-cover min-w-[375px] md:rounded-2xl">
+                              <img src="images/image-product-4.jpg" alt="img" id="img4"
+                                   class="shoe-images h-[340px]  object-cover min-w-[375px] md:rounded-2xl">
+                         </div>
+                         <div id="right" class="lg:hidden next button  top-1/2 translate-y-[-50%] w-10 h-10 bg-white text-center rounded-full absolute right-4 cursor-pointer"><img src="images/icon-next.svg"
+                                   class="btn-img w-2 h-3 absolute top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]"></div>
+                    </div>
+               </div>
+               <div class="hidden md:block">
+                    <div class="link-container flex justify-between overflow-x-auto scroll-smooth py-5 ">
+                         <a class="imgLink active rounded-[10px]"><img src="images/image-product-1.jpg" alt="img"
+                                   class="image-btn active h-[80px] object-cover w-[80px] rounded-lg hover:opacity-65"></a>
+                         <a class="imgLink rounded-[10px]"><img src="images/image-product-2.jpg" alt="img"
+                                   class="image-btn h-80px] object-cover w-[80px] rounded-lg hover:opacity-65"></a>
+                         <a class="imgLink rounded-[10px]"><img src="images/image-product-3.jpg" alt="img"
+                                   class="image-btn h-[80px] object-cover w-[80px] rounded-lg hover:opacity-65"></a>
+                         <a class="imgLink rounded-[10px]"><img src="images/image-product-4.jpg" alt="img"
+                                   class="image-btn h-[80px] object-cover w-[80px] rounded-lg hover:opacity-65"></a>
+                    </div>
+               </div>
+          </div>
+
+          <div class="p-5 md:p-0 ">
+               <div class="xl:pr-28">
+                    <p class="tracking-widest text-sm font-semibold text-DarkGrayishBlue">SNEAKER COMPANY</p>
+                    <h1 class="text-3xl font-bold py-4 md:text-5xl">Fall Limited Edition Sneakers</h1>
+                    <p class="text-DarkGrayishBlue md:pr-10 lg:pr-32 ">
+                         These low-profile sneakers are your perfect casual wear companion. Featuring a
+                         durable rubber outer sole, they’ll withstand everything the weather can offer.
+                    </p>
+               </div>
+               <div class="flex justify-between items-center py-5 md:flex-col md:gap-3 md:items-start">
+                    <div class="flex justify-between items-center gap-5">
+                         <h2 class="font-bold text-3xl">$<span id="price">125.00</span></h2>
+                         <div class="bg-black text-white px-3 py-1 rounded-md font-semibold">50%</div>
+                    </div>
+                    <h3 class="font-semibold line-through text-DarkGrayishBlue">$250.00</h3>
+               </div>
+               <div class="md:flex md:items-center gap-5 lg:pr-32">
+                    <div class="flex justify-between items-center gap-5 p-5 bg-PaleOrange rounded-xl w-full">
+                         <button class="cursor-pointer minus"> <img src="images/icon-minus.svg" alt="minus-picture"></button>
+                         <div class="font-bold num">0</div>
+                         <button class="cursor-pointer plus"> <img src="images/icon-plus.svg" alt="minus-picture"></button>
+                    </div>
+                    <button class="flex justify-center items-center gap-5 py-5 my-5 bg-MyOrange rounded-xl w-full cursor-pointer font-bold text-[18px]" id="add_cart">
+                         <img src="images/icon-cart.svg" alt="cart-picture">Add to cart
+                    </button>
+               </div>
+          </div>
+          
+     </main>
+     <footer class="text-center py-5 ">
+          <p class="text-xs">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-700">Frontend
+               Mentor.</a> Coded by <a href="#" class="text-blue-700">Medan</a>.</p>
+     </footer> 
+     <script src="dist/script.js"></script>
+</body>
+</html>
