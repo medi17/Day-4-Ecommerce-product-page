@@ -597,6 +597,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -605,6 +608,9 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -860,6 +866,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -2487,6 +2496,11 @@
       display: none;
     }
   }
+  .lg\:gap-22 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 22);
+    }
+  }
   .lg\:gap-32 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 32);
@@ -2502,6 +2516,26 @@
       padding-block: calc(var(--spacing) * 20);
     }
   }
+  .lg\:pr-0 {
+    @media (width >= 64rem) {
+      padding-right: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:pr-1 {
+    @media (width >= 64rem) {
+      padding-right: calc(var(--spacing) * 1);
+    }
+  }
+  .lg\:pr-10 {
+    @media (width >= 64rem) {
+      padding-right: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:pr-15 {
+    @media (width >= 64rem) {
+      padding-right: calc(var(--spacing) * 15);
+    }
+  }
   .lg\:pr-28 {
     @media (width >= 64rem) {
       padding-right: calc(var(--spacing) * 28);
@@ -2512,8 +2546,43 @@
       padding-right: calc(var(--spacing) * 32);
     }
   }
+  .lg\:pl-0 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:pl-20 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:pl-30 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 30);
+    }
+  }
   .lg\:pl-40 {
     @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 40);
+    }
+  }
+  .xl\:gap-32 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 32);
+    }
+  }
+  .xl\:py-20 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .xl\:pr-28 {
+    @media (width >= 80rem) {
+      padding-right: calc(var(--spacing) * 28);
+    }
+  }
+  .xl\:pl-40 {
+    @media (width >= 80rem) {
       padding-left: calc(var(--spacing) * 40);
     }
   }
